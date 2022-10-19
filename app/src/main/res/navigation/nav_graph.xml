@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/initialFragment">
+    <fragment
+        android:id="@+id/englishFragment"
+        android:name="com.hfad.language.EnglishFragment"
+        android:label="fragment_english"
+        tools:layout="@layout/fragment_english" />
+    <fragment
+        android:id="@+id/frenchFragment"
+        android:name="com.hfad.language.FrenchFragment"
+        android:label="fragment_french"
+        tools:layout="@layout/fragment_french" />
+    <fragment
+        android:id="@+id/italianFragment"
+        android:name="com.hfad.language.ItalianFragment"
+        android:label="fragment_italian"
+        tools:layout="@layout/fragment_italian" />
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.hfad.language.InitialFragment"
+        android:label="fragment_initial"
+        tools:layout="@layout/fragment_initial" >
+        <action
+            android:id="@+id/action_initialFragment_to_englishFragment"
+            app:destination="@id/englishFragment" />
+        <action
+            android:id="@+id/action_initialFragment_to_frenchFragment"
+            app:destination="@id/frenchFragment" />
+        <action
+            android:id="@+id/action_initialFragment_to_italianFragment"
+            app:destination="@id/italianFragment" />
+    </fragment>
+</navigation>
